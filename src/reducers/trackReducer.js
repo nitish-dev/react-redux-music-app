@@ -1,5 +1,6 @@
 import {
     GET_TRACK,
+    SEARCH_TRACKS,
     SET_ERROR,
     SET_LOADING
 } from '../actions/type';
@@ -18,6 +19,13 @@ export default (state = initalState, action) => {
             ...state,
             tracks:action.payload,
             heading:'Top 10 Tracks',
+            loading:false
+        }
+        case SEARCH_TRACKS:
+        return {
+            ...state,
+            tracks:action.payload,
+            heading:'Search Results',
             loading:false
         }
         case SET_LOADING:

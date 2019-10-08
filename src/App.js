@@ -1,7 +1,7 @@
 import React,{Fragment} from 'react';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Header from './components/layouts/Header';
-import Track from './components/tracks/Track';
+import Index from './components/layouts/Index';
 import ViewLyrics from './components/tracks/ViewLyrics';
 import 'materialize-css/dist/css/materialize.min.css';
 import './app.css';
@@ -16,7 +16,7 @@ const App = () => {
       <div className="container">
       <Router>
         <Switch>
-            <Route exact path="/" component={Track} />
+            <Route exact path="/" component={Index} />
             <Route exact path="/lyrics/track/:id" component={ViewLyrics} />
         </Switch>
       </Router>
